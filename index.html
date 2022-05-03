@@ -424,6 +424,54 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <form class="modal-form">
+          <b class="modal-form-title">Оставьте свои данные, мы вам перезвоним</b>
+          <ul class="modal-form-list list">
+            <li class="modal-form-item">
+              <label for="name" class="form-label">Имя</label>
+              <input type="text" name="" id="name" />
+              <svg class="modal-form-icon">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </li>
+            <li class="modal-form-item">
+              <label for="tel" class="form-label">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+              <svg class="modal-form-icon">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </li>
+
+            <li class="modal-form-item">
+              <label for="mail" class="form-label">Почта</label>
+              <input type="email" name="mail" id="mail" />
+              <svg class="modal-form-icon">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </li>
+          </ul>
+
+          <div class="form-comment">
+            <label for="comment" class="form-label">Комментарий</label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+              class="modal-form-comment"
+            ></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" name="agreement" value="agreement" id="agreement" />
+            <label for="agreement" class="agreement-label">
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="check-agreement link">Условия договора</a>
+            </label>
+          </div>
+
+          <button type="submit" class="modal-form-btn">Отправить</button>
+        </form>
+
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-icons">
             <use href="./images/icons.svg#icon-modal-close"></use>
