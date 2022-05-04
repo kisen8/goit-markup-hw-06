@@ -284,7 +284,6 @@ body {
   margin: 0;
   display: flex;
   width: 100%;
-  hight: 70px;
   justify-content: center;
   text-align: center;
 
@@ -870,7 +869,7 @@ body {
   cursor: pointer;
 }
 
-.form-comment {
+.form-field {
   margin: 0;
   margin-bottom: 20px;
   display: flex;
@@ -899,7 +898,7 @@ body {
   border-color: var(--accent-color);
 }
 
-.form-comment::placeholder {
+.form-field::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -907,8 +906,13 @@ body {
 
   color: rgba(117, 117, 117, 0.5);
 }
+
+/* checkbox , agreements*/
 .agreement-label {
-  display: inline-block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-left: 23px;
   font-weight: 400;
   font-size: 14px;
@@ -922,15 +926,56 @@ body {
   color: var(--accent-color);
 }
 
-/* checkbox */
-.form-checkbox {
-  position: relative;
+.form-field.group {
+  width: 425px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }
 
-.checkbox {
-  appearance: none;
+.icon-check {
   position: absolute;
+  width: 16px;
+  height: 15px;
+}
+.modal-check {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  fill: transparent;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
+.agreement-label .modal-check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  /* margin-left: 7px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:checked + .agreement-label span {
+  background-color: var(--accent-color);
+  border: transparent;
+}
+.checkbox:focus + .agreement-label span {
+  border-color: var(--accent-color);
+}
+
+.checkbox:checked + .agreement-label .icon-check {
+  fill: var(--white-color);
 }
 
 .modal-form-btn {
@@ -961,28 +1006,4 @@ body {
   height: 18px;
   top: 50%;
   left: 12px;
-}
-
-.icon-check {
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid var(--primary-text-color);
-  border-radius: 2px;
-  background-image: url('../images/check.svg');
-
-  background-position: center;
-  background-size: cover;
-}
-.checkbox:checked + .icon-check {
-  border: 2px solid var(--accent-color);
-  border-radius: 2px;
-  background-color: var(--accent-color);
 }

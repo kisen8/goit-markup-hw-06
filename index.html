@@ -455,7 +455,7 @@
             </li>
           </ul>
 
-          <div class="form-comment">
+          <div class="form-field">
             <label for="comment" class="form-label">Комментарий</label>
             <textarea
               name="comment"
@@ -465,18 +465,22 @@
             ></textarea>
           </div>
 
-          <div class="form-checkbox">
+          <div class="form-field group">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="agreement"
+              value="agreement"
+              id="agreement"
+            />
             <label for="agreement" class="agreement-label">
+              <span class="modal-check">
+                <svg class="icon-check">
+                  <use href="./images/icons.svg#icon-icon-check"></use>
+                </svg>
+              </span>
               Соглашаюсь с рассылкой и принимаю
               <a href="" class="check-agreement link">Условия договора</a>
-              <input
-                class="checkbox"
-                type="checkbox"
-                name="agreement"
-                value="agreement"
-                id="agreement"
-              />
-              <span class="icon-check"></span>
             </label>
           </div>
 
