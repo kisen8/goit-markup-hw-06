@@ -610,6 +610,14 @@ body {
   fill: var(--white-color);
 }
 
+/* subscriptions-block */
+.subscription-block {
+  margin: 0;
+  margin-left: 93px;
+  width: 570px;
+  height: 86px;
+}
+
 /* portfolio.html */
 
 .filter {
@@ -969,7 +977,7 @@ body {
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   background-image: url('../images/check.svg');
-  /* background-origin: padding-box; */
+
   background-position: center;
   background-size: cover;
 }
